@@ -3,6 +3,8 @@ function FullCardInfo(){
 
     let card = numberInput.value;
 
+    let cardNumber = card;
+
     let test = false;
 
     let result;
@@ -38,21 +40,22 @@ function FullCardInfo(){
 
     if(test == true){
 
-        if (/^5[1-5]/.test(card)) {
+        if (/^5[1-5]/.test(cardNumber)) {
 
-            result = 'mastercard';
+            result = 'MasterCard';
 
-          } else if (/^4/.test(card)) {
+          } else if (/^4/.test(cardNumber)) {
 
-            result = 'visa';
+            result = 'Visa';
 
-          } else if ( /^(5018|5020|5038|6304|6759|676[1-3])/.test(card)) {
+          } else if ( /^(5018|5020|5038|6304|6759|676[1-3])/.test(cardNumber)) {
 
-            result = 'maestro';
+            result = 'Maestro';
         
           } else {
             
-            result = 'unknown'
+            result = 'Unknown';
+            
           }
 
           TypeCard.innerHTML = `${result}`;
