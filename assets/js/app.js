@@ -40,7 +40,7 @@ function FullCardInfo(){
 
     if(test == true){
 
-        if (/^5[1-5]/.test(cardNumber)) {
+        if ((/^5[1-5]/.test(cardNumber)) || (/^2[221-720]/.test(cardNumber))) {
 
             result = 'MasterCard';
 
